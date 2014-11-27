@@ -7,7 +7,7 @@ Author: Renegade Empire
 Description: Autopay store credit when the order is marked as complete. Requires AffiliateWP http://goo.gl/N6DoZh and the Store Credit plugin http://goo.gl/wSAFbc 
 */
 
-function stadmin($order_id) {
+function AffiliateWP_Store_Credit_Autopay($order_id) {
 	$new_get_affiliate = new Affiliate_WP_Referrals_DB;
 	
 	$afstatus = new AffiliateWP_Store_Credit;
@@ -34,6 +34,6 @@ function stadmin($order_id) {
 	}
 }
 
-add_action('woocommerce_order_status_completed', 'stadmin');
+add_action('woocommerce_order_status_completed', 'AffiliateWP_Store_Credit_Autopay');
 
 ?>
