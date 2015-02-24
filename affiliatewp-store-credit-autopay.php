@@ -10,7 +10,6 @@ Description: Autopay store credit when the order is marked as complete. Requires
 function AffiliateWP_Store_Credit_Autopay($order_id) {
 	$new_get_affiliate = new Affiliate_WP_Referrals_DB;
 	
-	$afstatus = new AffiliateWP_Store_Credit;
 	
 	$array_aff = $new_get_affiliate->get_referrals(
 		array(
